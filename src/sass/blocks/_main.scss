@@ -1,14 +1,15 @@
 .promo {
-    min-height: 800px;
+    position: relative;
+    min-height: calc(var(--vh, 1vh) * 100);
     background: url('../img/bg/main_bg.jpg') center center/cover no-repeat;
     padding: 38px 0 65.01px 0;
 }
-.logo .logo_img, .gift .gift_img, .first_webinar .first_webinar_img {
+.logo_img, .gift_img, .first_webinar_img {
    display: block;
    margin: 0 auto; 
 }
 
-.logo .logo_text {
+.logo_text {
     color: #FFFFFF;
     font-weight: 500;
     font-size: 15px;
@@ -35,7 +36,7 @@ h2.title {
     text-align: center;
 }
 
-.simple .title_big {
+.title_big {
     color: #FFFFFF;
     font-weight: 900;
     font-size: 80px;
@@ -44,7 +45,7 @@ h2.title {
     margin-top: 20.5px;
 }
 
-.promo .promo_text {
+.promo_text {
     padding: 0 16px 0 16px;
     color: #FFFFFF;
     font-weight: 300;
@@ -54,16 +55,15 @@ h2.title {
     margin-top: 22.5px;
 }
 
-.promo .promo_text span {
+.promo_text span {
     text-transform: uppercase;
     color: #F9BF3B;
     font-weight: bold;
 }
 
-.promo .promo_btn, .gift .gift_btn {
+.promo_btn, .gift_btn {
     display: block;
-    margin: 0 auto;
-    margin-top: 72px;
+    margin: 72px auto 70.5px auto;
     width: 313px;
     height: 72px;
     background: linear-gradient(0deg, #2798B9 0%, #3AB6DA 100%);
@@ -84,10 +84,13 @@ h2.title {
 }
 
 .more {
-    margin-top: 70.5px;
+    position: absolute;
+    bottom: 65px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.more .more_text {
+.more_text {
     color: #FFFFFF;
     font-weight: 100;
     font-size: 15px;
@@ -97,10 +100,13 @@ h2.title {
 
 .more .more_img {
     display: block;
-    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     margin-top: 7px;
     width: 29.99px;
     height: 18.99px;
+    animation: arrowDown 2s infinite
 }
 
 .waiting {
@@ -110,7 +116,7 @@ h2.title {
     background: #EFEFEF;
 }
 
-.waiting .waiting_header, .finish .finish_header {
+.waiting_header, .finish_header {
     color: #252525;
     font-weight: normal;
     font-size: 30px;
@@ -118,7 +124,7 @@ h2.title {
     text-transform: uppercase;
 }
 
-.finish .finish_header {
+.finish_header {
     color: #EFEFEF;
 }
 
@@ -131,7 +137,7 @@ h2.title {
     background: #F9BF3B;
 }
 
-.waiting .waiting_subheader {
+.waiting_subheader {
     margin-top: 18.5px;
     color: #4A4A4A;
     font-weight: normal;
@@ -139,22 +145,22 @@ h2.title {
     text-align: center;    
 }
 
-.waiting .waiting_wrapper {
+.waiting_wrapper {
     margin-top: 45.5px;
     display: flex;
     justify-content: space-between;
 }
 
-.waiting .waiting_wrapper .waiting_item {
-    width: 342px;
+.waiting_item {
+    width: 100%;
     text-align: center;
 }
 
-.waiting .waiting_wrapper .waiting_item .waiting_img {
+.waiting_img {
     width: 100%;
 }
 
-.waiting .waiting_wrapper .waiting_item .waiting_descr {
+.waiting_descr {
     margin-top: 26px;
     color: #4A4A4A;
     font-weight: 300;
@@ -168,14 +174,14 @@ h2.title {
     padding: 105px 0 74px 0;
 }
 
-.optimization .optimization_header {
+.optimization_header {
     margin-left: 389px;
     color: #299CBD;
     font-weight: 900;
     font-size: 30px;
     text-transform: uppercase;
 }
-.optimization .optimization_text {
+.optimization_text {
     margin-top: 15px;
     margin-left: 389px;
     color: #4A4A4A;
@@ -188,7 +194,11 @@ h2.title {
     font-weight: 700;
 }
 
-.optimization .optimization_img {
+.optimization_text_minisize, .optimization_text_minisize2 {
+    display: none;
+}
+
+.optimization_img {
     position: absolute;
     top: -44px;
     left: -240px;
@@ -201,7 +211,7 @@ h2.title {
     padding: 86px 0 69.5px 0;
 }
 
-.finish .finish_wrapper {
+.finish_wrapper {
     margin-top: 39px;
     display: flex;
     justify-content: space-between;
@@ -222,7 +232,7 @@ h2.title {
     border-radius: 100%;
 }
 
-.finish .finish_wrapper .finish_item .finish_descr {
+.finish_descr {
     margin-top: 24.5px;
     color: #EFEFEF;
     font-weight: 300;
@@ -237,7 +247,7 @@ h2.title {
     padding: 88px 0;
 }
 
-.gift .gift_text {
+.gift_text {
     margin-top: 45px;
     color: #252525;
     font-weight: normal;
@@ -251,7 +261,7 @@ h2.title {
     padding: 84px 0 52.5px 0px;
 }
 
-.first_webinar .first_webinar_header {
+.first_webinar_header {
     margin-top: 36px;
     color: #252525;
     font-weight: normal;
@@ -260,7 +270,7 @@ h2.title {
     text-transform: uppercase;
 }
 
-.first_webinar .first_webinar_time {
+.first_webinar_time {
     margin-top: 30px;
     color: #299CBD;
     font-weight: 900;
@@ -269,7 +279,7 @@ h2.title {
     text-transform: uppercase;
 }
 
-.first_webinar .first_webinar_descr {
+.first_webinar_descr {
     margin-top: 24.5px;
     color: #4A4A4A;
     font-size: 23px;
