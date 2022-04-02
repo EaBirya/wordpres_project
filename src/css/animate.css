@@ -91,6 +91,6 @@
 }
 
 .animate__rotOut {
-  -webkit-animation-name: rot;
-  animation-name: rot;
+  -webkit-animation-name: rotOut;
+  animation-name: rotOut;
 } 
