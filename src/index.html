@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Worpress интенсив</title>
     <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -22,11 +23,11 @@
                 <h2 class="title">Куда сложнее сделать это правильно!</h2>
             </div>
 
-            <div class="promo_text">Ежедневно в России появляется более 5 000 новых сайтов. <br> 
-                И только единицы из них становятся популярными и приносят ощутимую прибыль. В чем секрет? В чем формула успеха? Узнайте на предстоящем двухдневном <span>БЕСПЛАТНОМ</span> интенсиве!
+            <div class="promo_text">
+                Ежедневно в России появляется более 5 000 новых сайтов. <br> &nbsp; И только единицы из них становятся популярными и приносят ощутимую прибыль. В чем секрет? В чем формула успеха? Узнайте на предстоящем двухдневном <span>БЕСПЛАТНОМ</span> интенсиве!
             </div>
             
-            <button class="promo_btn">Записаться на интенсив!</button>
+            <button data-modal="consultation" class="promo_btn">Записаться на интенсив!</button>
 
         </div>
         <div class="more">
@@ -131,11 +132,11 @@
 
     <section class="gift">
         <div class="container">
-            <img src="icons/gift.png" alt="gift" class="gift_img">
+            <img id="gift_img" src="icons/gift.png" alt="gift" class="gift_img animate__animated animate__shakeY wow" data-wow-delay="1s">
             <div class="gift_text">
                 Для всех участников интенсива предусмотрены бонусы и подарки. Нажимайте на кнопку ниже, принимайте участие в вебинарах и забирайте свой приз по окончании обучения!
             </div>
-            <button class="gift_btn">Записаться на интенсив!</button>
+            <button data-modal="consultation" class="gift_btn">Записаться на интенсив!</button>
         </div>
     </section>
 
@@ -162,11 +163,41 @@
         </div>
     </footer>
 
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <img src="icons/first_logo_black.png" alt="logo" class="modal__logo">
+            <div class="modal__subtitle">Просто заполните форму заявки</div>
+            <div class="modal__descr">и мы перезвоним вам в течении 10 минут для подтверждения</div>
+            <form class="feed-form feed-form_modal" action="#">
+                <input type="date" name="data">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон">
+                <button class="feed-form__btn promo_btn">Отправить заявку!</button>
+            </form>
+        </div>
+
+        <div class="modal modal_mini" id="thanks">
+            <img src="icons/first_logo_black.png" alt="logo" class="modal__logo modal__logo_rot animate__animated animate__rotOut wow" data-wow-duration="2s" data-wow-delay="4s">
+            <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+            <div class="modal__descr modal__descr_line-height">Наш менеджер свяжется с вами <br> в ближайшее время!</div>
+        </div>
+
+    </div>
+
     <a href="#up" class="pageup">
         <img src="icons/pageup.svg" alt="up">
     </a>
 
+
+
+
+
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+
     <script src="js/script.js"></script>
 
 </body>
